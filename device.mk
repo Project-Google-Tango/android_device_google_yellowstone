@@ -99,6 +99,17 @@ PRODUCT_PACKAGES += \
 
 TARGET_RECOVERY_DEVICE_MODULES := rm-wrapper
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.tegra \
+    libsensors.mpl \
+    libsensors.nvs_input \
+    libsensors.base \
+    libsensors.isl29018 \
+    libsensors.iio.lights \
+    libsensors.isl29028
+
+
 # Wifi
 # All Shield devices currently use broadcom wifi / bluetooth modules
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
