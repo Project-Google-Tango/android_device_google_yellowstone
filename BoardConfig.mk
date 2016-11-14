@@ -19,6 +19,8 @@ DEVICE_PATH := device/google/yellowstone
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
