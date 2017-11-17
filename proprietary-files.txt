@@ -19,7 +19,7 @@ vendor/lib/libnvddk_2d_v2.so
 vendor/lib/libnvddk_vic.so
 vendor/lib/libnvglsi.so
 vendor/lib/libnvgr.so
-vendor/lib/libnvos.so
+-vendor/lib/libnvos.so
 vendor/lib/libnvrmapi_tegra.so
 vendor/lib/libnvrm_graphics.so
 vendor/lib/libnvrm.so
