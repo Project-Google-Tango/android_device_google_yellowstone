@@ -1,0 +1,27 @@
+# Raydium touch
+lib/librm31080.so:recovery/root/sbin/librm31080.so
+lib/para_10_02_00_10.so:recovery/root/sbin/para_10_02_00_10.so
+lib/para_10_02_00_20.so:recovery/root/sbin/para_10_02_00_20.so
+lib/para_10_02_00_b0.so:recovery/root/sbin/para_10_02_00_b0.so
+lib/para_10_03_00_10.so:recovery/root/sbin/para_10_03_00_10.so
+lib/para_10_03_00_20.so:recovery/root/sbin/para_10_03_00_20.so
+lib/para_10_03_00_b0.so:recovery/root/sbin/para_10_03_00_b0.so
+lib/para_10_04_00_10.so:recovery/root/sbin/para_10_04_00_10.so
+lib/para_10_04_00_20.so:recovery/root/sbin/para_10_04_00_20.so
+lib/para_10_04_00_b0.so:recovery/root/sbin/para_10_04_00_b0.so
+lib/para_10_04_00_c0.so:recovery/root/sbin/para_10_04_00_c0.so
+lib/para_10_05_00_c0.so:recovery/root/sbin/para_10_05_00_c0.so
+lib/para_10_06_00_b0.so:recovery/root/sbin/para_10_06_00_b0.so
+lib/para_10_07_00_b0.so:recovery/root/sbin/para_10_07_00_b0.so
+lib/para_10_08_00_10.so:recovery/root/sbin/para_10_08_00_10.so
+lib/para_10_08_00_20.so:recovery/root/sbin/para_10_08_00_20.so
+lib/para_10_08_00_b0.so:recovery/root/sbin/para_10_08_00_b0.so
+lib/para_10_09_00_c0.so:recovery/root/sbin/para_10_09_00_c0.so
+lib/para_10_09_01_c0.so:recovery/root/sbin/para_10_09_01_c0.so
+lib/para_10_09_02_c0.so:recovery/root/sbin/para_10_09_02_c0.so
+lib/para_10_0A_00_b0.so:recovery/root/sbin/para_10_0A_00_b0.so
+lib/para_12_01_00_a0.so:recovery/root/sbin/para_12_01_00_a0.so
+lib/para_12_01_01_a0.so:recovery/root/sbin/para_12_01_01_a0.so
+lib/para_12_01_02_a0.so:recovery/root/sbin/para_12_01_02_a0.so
+lib/para_12_01_03_a0.so:recovery/root/sbin/para_12_01_03_a0.so
+lib/hw/ts.default.so:recovery/root/sbin/ts.default.so
