@@ -1,0 +1,56 @@
+#
+# from device/nvidia/ardbeg/system.prop
+#
+ro.opengles.version = 196608
+wifi.interface=wlan0
+ap.interface=wlan0
+persist.tegra.nvmmlite = 1
+persist.wlan.ti.calibrated = 0
+ro.sf.override_null_lcd_density = 1
+ro.sf.lcd_density = 320
+
+# use glcomposer as the default compositor
+persist.tegra.compositor=glcomposer
+
+
+# don't preload OpenGL in Zygote, the Tegra drivers do not like it
+ro.zygote.disable_gl_preload=true
+
+pbc.enabled=0
+pbc.log=0
+pbc.board_power_threshold=20000
+pbc.low_polling_freq_threshold=1000
+pbc.rails=cpu,core,dram,gpu
+pbc.cpu.power=/sys/bus/i2c/devices/7-0045/power1_input
+pbc.cpu.cap=/dev/cpu_freq_max
+pbc.cpu.cap.af=/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+pbc.core.power=/sys/bus/i2c/devices/7-0043/power1_input
+pbc.dram.power=/sys/bus/i2c/devices/7-0049/power1_input
+pbc.gpu.power=/sys/bus/i2c/devices/7-004b/power1_input
+pbc.gpu.cap=/dev/gpu_freq_max
+pbc.gpu.cap.af=/sys/devices/platform/host1x/gk20a.0/devfreq/gk20a.0/available_frequencies
+
+# usb vendor and product ID definition
+ro.nv.usb.vid = 18d1
+ro.nv.usb.pid.mtp = 4D01
+ro.nv.usb.pid.mtp.adb = 4D02
+ro.nv.usb.pid.rndis = 4D03
+ro.nv.usb.pid.rndis.adb = 4D04
+ro.nv.usb.pid.ptp = 4D05
+ro.nv.usb.pid.ptp.adb = 4D06
+
+persist.ril.forceairplanemode = 0
+
+# enable auto sensorhub update
+persist.sensorhubd.update = 1
+
+# disable check for sim to unlock
+keyguard.no_require_sim=true
+
+# enable klog
+klog.file = /storage/sdcard0/klog
+klog.enabled = no
+
+# Tango required properties
+persist.config.persist_cal_path = /persist
+persist.config.calibration_fac = /sdcard/config/calibration.xml
