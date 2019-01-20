@@ -22,6 +22,28 @@ PRODUCT_AAPT_CONFIG := normal
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    libaudio-resampler \
+    libaudiospdif \
+    libtinyalsa \
+    libtinycompress \
+    tinycap \
+    tinymix \
+    tinyplay \
+    xaplay \
+    libstagefrighthw \
+    enctune.conf
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
+    $(LOCAL_PATH)/audio/nvaudio_conf_5642.xml:system/etc/nvaudio_conf_5642.xml
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \

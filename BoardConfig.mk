@@ -26,6 +26,10 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a15
 
+# Audio
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := true
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/google/yellowstone
 TARGET_KERNEL_CONFIG := yellowstone_defconfig
