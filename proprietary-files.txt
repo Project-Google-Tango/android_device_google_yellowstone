@@ -1,0 +1,3 @@
+# Wi-fi
+vendor/firmware/bcm43341/fw_bcmdhd.bin
+etc/nvram_43341_rev4.txt
