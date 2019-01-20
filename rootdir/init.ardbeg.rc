@@ -1,0 +1,59 @@
+#Copyright (c) 2011-2013 NVIDIA Corporation.  All Rights Reserved.
+#
+#NVIDIA Corporation and its licensors retain all intellectual property and
+#proprietary rights in and to this software and related documentation.  Any
+#use, reproduction, disclosure or distribution of this software and related
+#documentation without an express license agreement from NVIDIA Corporation
+#is strictly prohibited.
+
+import init.t124_emmc.rc
+import init.mmap_topdown.rc
+
+on fs
+    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
+    setprop ro.crypto.umount_sd false
+    setprop ro.crypto.fuse_sdcard true
+    mount_all /fstab.ardbeg
+
+on boot
+    #max resolution supported for Miracast is 1080p, represented interms of macroblocks
+    setprop nvwfd.maxresolution_macroblocks 8160
+    #enable Miracast game mode support
+    setprop nvwfd.gamemode 1
+    #set panel rotation
+    setprop persist.tegra.panel.rotation 0
+
+    # Start GPS daemon
+    service gps-daemon /system/bin/glgps_nvidiaTegra2android -c /system/etc/gps/gpsconfig.xml
+    user gps
+    socket gps seqpacket 0660 gps system
+    group system inet sdcard_rw sdcard_r
+    class main
+    disabled
+
+on init
+    setprop phs.gpucompute.gpu_freq 30
+    # Mount a tmpfs into /mnt/tmp for hosting nvram, phs shared memory
+    mkdir /mnt/tmp 0770 system system
+    mount tmpfs tmpfs /mnt/tmp mode=0775,gid=1003
+
+    # make symlink for the tegra watchdog device
+    symlink /dev/watchdog0 /dev/watchdog
+
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+service watchdogd /sbin/watchdogd 10 20
+    class core
+    user root
+
+
+#read HWID then set appropriate property
+service check_cad_model /system/bin/check_cad_model.sh
+    class late_start
+    user root
+    oneshot
+
+# Record kernel if klog is enabled
+service klogd /system/bin/klogd.sh
+    class core
+    user root
+    oneshot

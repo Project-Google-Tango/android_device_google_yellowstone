@@ -17,9 +17,17 @@
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.ardbeg \
-    ueventd.ardbeg.rc \
+    init.ardbeg.rc \
+    init.hdcp.rc \
+    init.icera.common.rc \
+    init.icera.rc \
+    init.icera.tablet.rc \
     init.nv_dev_board.usb.rc \
-    init.recovery.nv_dev_board.usb.rc
+    init.recovery.nv_dev_board.usb.rc \
+    init.t124_emmc.rc \
+    init.t124.rc \
+    init.tlk.rc \
+    ueventd.ardbeg.rc
 
 TARGET_RECOVERY_DEVICE_MODULES := rm-wrapper
 
