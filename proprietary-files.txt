@@ -45,6 +45,9 @@ etc/firmware/tegra12x/nvhost_msenc031.fw
 etc/firmware/tegra12x/nvhost_tsec.fw
 etc/firmware/tegra12x/vic03_ucode.bin
 
+# USB firmware
+etc/firmware/tegra_xusb_firmware
+
 # Wi-fi
 vendor/firmware/bcm43341/fw_bcmdhd.bin
 etc/nvram_43341_rev4.txt
