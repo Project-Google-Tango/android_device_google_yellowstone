@@ -70,6 +70,10 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.ardbeg
 LZMA_RAMDISK_TARGETS := recovery
+
+# seccomp
+BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
+
 # TWRP
 ifeq ($(WITH_TWRP),true)
 include $(DEVICE_PATH)/twrp.mk
