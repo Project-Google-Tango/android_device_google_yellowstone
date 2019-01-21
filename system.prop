@@ -9,7 +9,7 @@ persist.wlan.ti.calibrated = 0
 ro.sf.lcd_density = 320
 
 # use glcomposer as the default compositor
-persist.tegra.compositor=glcomposer
+persist.tegra.compositor=surfaceflinger
 
 
 # don't preload OpenGL in Zygote, the Tegra drivers do not like it
