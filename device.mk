@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libmhax
 
+# Input configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/raydium_ts.idc:system/usr/idc/raydium_ts.idc
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
