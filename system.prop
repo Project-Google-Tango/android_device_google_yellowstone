@@ -50,3 +50,4 @@ keyguard.no_require_sim=true
 klog.file = /storage/sdcard0/klog
 klog.enabled = no
 
+qemu.hw.mainkeys=0
