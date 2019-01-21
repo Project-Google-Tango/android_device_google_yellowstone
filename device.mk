@@ -90,6 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.ardbeg \
     init.ardbeg.rc \
+    init.comms.rc \
     init.hdcp.rc \
     init.icera.common.rc \
     init.icera.rc \
