@@ -75,6 +75,9 @@ lib/para_12_01_02_a0.so
 lib/para_12_01_03_a0.so
 lib/hw/ts.default.so
 
+# Sensors
+-lib/libmplmpu.so
+
 # USB firmware
 etc/firmware/tegra_xusb_firmware
 
