@@ -6,7 +6,6 @@ wifi.interface=wlan0
 ap.interface=wlan0
 persist.tegra.nvmmlite = 1
 persist.wlan.ti.calibrated = 0
-ro.sf.override_null_lcd_density = 1
 ro.sf.lcd_density = 320
 
 # use glcomposer as the default compositor
@@ -51,6 +50,3 @@ keyguard.no_require_sim=true
 klog.file = /storage/sdcard0/klog
 klog.enabled = no
 
-# Tango required properties
-persist.config.persist_cal_path = /persist
-persist.config.calibration_fac = /sdcard/config/calibration.xml
