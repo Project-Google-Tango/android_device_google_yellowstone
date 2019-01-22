@@ -32,6 +32,7 @@ on init
 
     # make symlink for the tegra watchdog device
     symlink /dev/watchdog0 /dev/watchdog
+    export LD_SHIM_LIBS "/system/lib/hw/audio.primary.tegra.so|libshim_audio.so"
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /sbin/watchdogd 10 20

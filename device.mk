@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
     $(LOCAL_PATH)/audio/nvaudio_conf_5642.xml:system/etc/nvaudio_conf_5642.xml
 
+# Audio shim
+PRODUCT_PACKAGES += \
+    libshim_audio
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
