@@ -1,3 +1,18 @@
+# Audio
+lib/hw/audio.primary.tegra.so|3a1ddeba621ac14e039ab68e11eb2e22c3d6526f
+lib/libnvoice.so
+lib/libstlport.so
+lib/libtinyalsa.so:lib/libyellalsa.so
+vendor/lib/libaudioavp.so
+vendor/lib/libnvaudioservice.so
+vendor/lib/libnvavp.so
+vendor/lib/libnvavp.so
+vendor/lib/libnvcapaudioservice.so
+vendor/lib/libnvcapclk.so
+vendor/lib/libnvfusebypass.so
+vendor/lib/libnvmm_utils.so
+
+
 # Graphics
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
