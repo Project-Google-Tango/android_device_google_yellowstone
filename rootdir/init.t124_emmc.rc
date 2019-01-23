@@ -9,7 +9,7 @@
 import init.t124.rc
 
 on post-fs-data
-    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/FCT /mnt/factory ro
+    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/PES /persist ro
 
 # create filesystems if necessary
 service setup_fs /system/bin/setup_fs \

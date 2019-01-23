@@ -18,6 +18,8 @@ on init
     mkdir /mnt/tmp 0770 system system
     mount tmpfs tmpfs /mnt/tmp mode=0775,gid=1003
 
+    chown system system /sys/devices/virtual/misc/touch/slowscan_enable
+
     start watchdogd
 on post-fs-data
     chmod 0644 /persist/wifi_mac.txt root root
@@ -142,6 +144,21 @@ on boot
 
 # Touch
     chown system system /sys/class/input/input0/enabled
+
+    chown system system /sys/devices/tegradc.0/enable
+    chown system system /sys/devices/tegradc.1/enable
+    chown system system /sys/devices/platform/host1x/nvavp/boost_sclk
+    chown system system /sys/devices/virtual/misc/touch/report_mode
+    chown system system /sys/devices/virtual/misc/touch/selftest_spi_burst_read
+    chown system system /sys/devices/virtual/misc/touch/selftest_spi_burst_write
+    chown system system /sys/devices/virtual/misc/touch/selftest_spi_byte_read
+    chown system system /sys/devices/virtual/misc/touch/selftest_spi_byte_write
+    chown system system /sys/devices/virtual/misc/touch/touchfile_check
+    chown system system /sys/devices/virtual/misc/touch/selftest_enable
+    chown system system /sys/devices/virtual/misc/touch/get_platform_id_gpio
+    chown system system /sys/devices/virtual/misc/touch/self_test
+    chown system system /sys/class/input/input1/enabled
+    chown system system /sys/class/input/input2/enabled
 
 # Power management settings
     write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp 0
@@ -320,14 +337,11 @@ service pbc /system/bin/pbc
     group root
 
 #Raydium touch setting
-service rm_ts_service    /system/bin/rm_ts_server
-    disabled
-    class late_start
+service rm_ts_service    /vendor/bin/rm_ts_server
+    class main
     user system
     group system input
-
-on property:ro.boot.touch_vendor_id=0
-    start rm_ts_service
+    writepid /dev/cpuset/foreground/tasks
 
 # unified scaling setup
 service ussr_setup /system/bin/ussr_setup.sh

@@ -22,6 +22,10 @@ TARGET_TEGRA_VERSION := t124
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/google/yellowstone/overlay
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \

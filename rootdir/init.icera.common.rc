@@ -122,11 +122,3 @@ on property:gsm.modem.riltest.enabled=0
 on property:gsm.modem.riltest.enabled=1
     stop ril-daemon-test
     start ril-daemon-test
-
-on property:persist.ril.forceairplanemode=0
-    stop ril-daemon
-    start ril-daemon
-
-on property:persist.ril.forceairplanemode=1
-    stop ril-daemon
-    start ril-daemon

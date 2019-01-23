@@ -52,8 +52,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= $(DEVICE_PATH)/bluetooth
 USE_OPENGL_RENDERER := true
 
 # Kernel cmdline
-BOARD_KERNEL_CMDLINE := androidboot.hardware=ardbeg androidboot.selinux=permissive
-# androidboot.ccihwid=6
+BOARD_KERNEL_CMDLINE := androidboot.hardware=ardbeg androidboot.selinux=permissive androidboot.ccihwid=6
+# 
 
 TARGET_KERNEL_DT_NAME := tegra124-ardbeg
 
@@ -78,6 +78,10 @@ LZMA_RAMDISK_TARGETS := recovery
 
 # seccomp
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
+
+BOARD_SEPOLICY_DIRS += device/google/yellowstone/common/sepolicy/raydium
+BOARD_SEPOLICY_DIRS += device/google/yellowstone/common/sepolicy/common
+BOARD_SEPOLICY_DIRS += device/google/yellowstone/common/sepolicy/icera
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
