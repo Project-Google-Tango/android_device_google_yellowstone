@@ -34,8 +34,14 @@ BOARD_USES_ALSA_AUDIO := true
 
 # Board
 TARGET_BOARD_PLATFORM := tegra
+TARGET_TEGRA_VERSION := t124
+TARGET_TEGRA_FAMILY := t12x
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+BOARD_SUPPORT_NVOICE := true
+BOARD_SUPPORT_NVAUDIOFX := true
+BOARD_USES_SHIELDTECH := true
+BOARD_REMOVES_RESTRICTED_CODEC := false
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -45,12 +51,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= $(DEVICE_PATH)/bluetooth
 # Graphics
 USE_OPENGL_RENDERER := true
 
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/google/yellowstone
-TARGET_KERNEL_CONFIG := yellowstone_defconfig
+# Kernel cmdline
 BOARD_KERNEL_CMDLINE := androidboot.hardware=ardbeg androidboot.selinux=permissive
 # androidboot.ccihwid=6
-BOARD_KERNEL_IMAGE_NAME := zImage
+
+TARGET_KERNEL_DT_NAME := tegra124-ardbeg
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
